@@ -14,9 +14,6 @@ public class HomeController {
 		
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Model model) {
-		
-		
-
 		return "home";
 	}
 
@@ -24,7 +21,7 @@ public class HomeController {
 	@RequestMapping(value = "/goJoin", method = RequestMethod.GET)
 	public ModelAndView goJoin() {
 		mav = new ModelAndView();
-		mav.setViewName("goJoin"); //join.jsp 회원가입 페이지
+		mav.setViewName("join"); //join.jsp 회원가입 페이지
 		return mav;
 	}
 

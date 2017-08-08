@@ -45,8 +45,8 @@
 							<li role="presentation"><a href="freelancer">프리랜서</a></li>
 							<li role="presentation"><a href="manual">이용방법</a></li>
                             <li role="presentation"><a href="pms">프로젝트 관리</a></li>
-                            <li role="presentation"><a href="lohin">로그인</a></li>
-                            <li role="presentation"><a href="join">회원가입</a></li>
+                            <li role="presentation"><a href="login">로그인</a></li>
+                            <li role="presentation"><a href="goJoin">회원가입</a></li>
 						</ul>
 					</div>
 				</div>		

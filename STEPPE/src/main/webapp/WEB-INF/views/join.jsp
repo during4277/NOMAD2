@@ -9,11 +9,11 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>steppe 회원가입</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link href="css/animate.min.css" rel="stylesheet"> 
-	<link href="css/style.css" rel="stylesheet" />	
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="resources/css/font-awesome.min.css">
+	<link rel="stylesheet" href="resources/css/animate.css">
+	<link href="resources/css/animate.min.css" rel="stylesheet"> 
+	<link href="resources/css/style.css" rel="stylesheet" />	
     <!-- =======================================================
         Theme Name: Day
         Theme URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
@@ -24,6 +24,34 @@
         .navbar-header{
             /*background-color: dimgrey;*/
         }  
+        
+        #join{
+        	/* width: 300px; */
+        	/* background-color: lightgrey; */
+        	text-align: center;
+        }
+        table{
+        	width: 300px;
+        	/* text-align: center; */
+        	margin:0 auto;
+        	
+        }
+        td{
+        	padding: 3px;
+        }
+        input{
+        	color: black;
+        	width: 250px; 
+        }
+        .btn{
+        	color: white;
+        	margin-top: 0px;
+        }
+        .btn:hover{
+        	background-color:skyblue;
+        	color: white;
+        	margin-top: 0px;
+        }
     </style>
   </head>
   <body>
@@ -60,27 +88,74 @@
     </header>
     <div class="about">
 		<div class="container">
-            <h1 style="color:black;"></h1>
-            	<div id="join">
-					<form name="joinForm" method="post">
-						<div class="input"><input type="text" id="userId" name="userId" placeholder="아이디" autofocus /></div>
-						<div class="span"><span id="notiId"></span></div>
-						<div class="input"><input type="password" id="userPw" name="userPw" placeholder="비밀번호"  /></div>
-						<div class="input"><input type="password" id="confirmPw" name="confirmPw" placeholder="비밀번호 확인" /></div>
-						<div class="span"><span id="notiPw"></span></div>
-						<div class="input"><input type="text" id="userName" name="userName" placeholder="이름" /></div>
-						<div class="span"><span id="notiName"></span></div>
-						<div class="input"><input type="text" id="userPhone" name="userPhone" placeholder="핸드폰 번호" /></div>
-						<div class="span"><span id="notiPhone">ex)010-0000-0000</span></div>
-						<div class="input"><input type="text" id="userEmail" name="userEmail" placeholder="이메일" /></div>
-						<div class="span"><span id="notiEmail"></span></div>
-						<div class="input"><input type="text" id="userCode" name="userCode" placeholder="인증번호" /></div>
-						<div class="button"><input type="button" class="btn" onClick="sendCode()" value="인증번호 발송" /></div> 
-						<div class="span"><span id="notiCode"></span></div>
-						<div class="button"><input type="button" class="btn" onClick="join()" value="회원가입" /></div> 
-						<div class="button"><input type="button" class="btn" onClick="toIndex()" value="돌아가기" /></div>
-					</form>
-				</div>   
+           	<div id="join">
+           		<h3 style="color:black;">회원 가입</h3>
+				<form name="joinForm" method="post">
+					<table>
+						<tr>
+							<td>
+								<input type="text" id="userId" name="userId" placeholder="아이디" />
+								<span id="notiId"></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="password" id="userPw" name="userPw" placeholder="비밀번호"  />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="password" id="confirmPw" name="confirmPw" placeholder="비밀번호 확인" />
+								<span id="notiPw"></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="text" id="userName" name="userName" placeholder="이름" />
+								<span id="notiName"></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="text" id="userPhone" name="userPhone" placeholder="핸드폰 번호 ex)010-0000-0000" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<!-- <span id="notiPhone">ex)010-0000-0000</span> -->
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="text" id="userEmail" name="userEmail" placeholder="이메일" />
+								<span id="notiEmail"></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="button" class="btn" onClick="sendCode()" value="인증번호 발송" />
+								<span id="notiCode"></span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="text" id="userCode" name="userCode" placeholder="인증번호" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="button" class="btn" onClick="join()" value="회원가입" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="button" class="btn" onClick="toIndex()" value="돌아가기" />
+							</td>
+						</tr>
+						
+					</table>
+				</form>
+			</div>   
         </div>
     </div>
 	<hr>
@@ -94,30 +169,28 @@
 					
 	     		</div>
 			</div>
+			<div class="col-md-4 col-md-offset-4">
+				<div class="copyright">
+					&copy; Day Theme. All Rights Reserved.
+		              <div class="credits">
+		                  <!-- 
+		                      All the links in the footer should remain intact. 
+		                      You can delete the links only if you purchased the pro version.
+		                      Licensing information: https://bootstrapmade.com/license/
+		                      Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Day
+		                  -->
+		                  <a href="https://bootstrapmade.com/">Free Bootstrap Themes</a> by 
+		                  <a href="https://bootstrapmade.com/">BootstrapMade</a>
+		                  <br/>
+		                  <a href="#">공지사항</a>&nbsp;&nbsp;&nbsp;
+		                  <a href="#">faq</a>&nbsp;&nbsp;&nbsp;
+		                  <a href="#">이용약관</a>
+		              </div>
+				</div>
+			</div>			
 		</div>
 	</div>	
 				
-			
-			
-	<div class="col-md-4 col-md-offset-4">
-		<div class="copyright">
-			&copy; Day Theme. All Rights Reserved.
-              <div class="credits">
-                  <!-- 
-                      All the links in the footer should remain intact. 
-                      You can delete the links only if you purchased the pro version.
-                      Licensing information: https://bootstrapmade.com/license/
-                      Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Day
-                  -->
-                  <a href="https://bootstrapmade.com/">Free Bootstrap Themes</a> by 
-                  <a href="https://bootstrapmade.com/">BootstrapMade</a>
-                  <br/>
-                  <a href="#">공지사항</a>&nbsp;&nbsp;&nbsp;
-                  <a href="#">faq</a>&nbsp;&nbsp;&nbsp;
-                  <a href="#">이용약관</a>
-              </div>
-		</div>
-	</div>						
 	
 	<!--푸터 영역 끝-->
       
