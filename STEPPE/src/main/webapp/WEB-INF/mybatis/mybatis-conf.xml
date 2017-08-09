@@ -12,5 +12,6 @@
 	</settings>
 	
 	<typeAliases>
+		<typeAlias alias="catagory" type="com.steppe.nomad.bean.Catagory"/>
 	</typeAliases> 
 </configuration> 
