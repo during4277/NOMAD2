@@ -12,7 +12,8 @@
 	</settings>
 	
 	<typeAliases>
+
 		<typeAlias alias="portfolio" type="com.steppe.nomad.bean.Portfolio"/>
-		<typeAlias alias="catagory" type="com.steppe.nomad.bean.Catagory"/>
+
 	</typeAliases> 
 </configuration> 
