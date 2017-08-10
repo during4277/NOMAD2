@@ -68,17 +68,11 @@ public class ProjectManagement {
 			}
 			mav.addObject("cList2", sb.toString());
 			System.out.println(sb);
-		}if(pc1_id==0){
 			view="projectInsert";
-		mav.setViewName(view);
 		}else{
-			try {
-				res.getWriter().write(pc1_id);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			view="errorAjax";
 		}
-		
+		mav.setViewName(view);
 	}
 
 	private void getprojectCatagory1() {
@@ -89,11 +83,11 @@ public class ProjectManagement {
 		
 		if(cList1!=null){
 			StringBuilder sb=new StringBuilder();
-			sb.append("<select name='first' id='firstCatagory'>");
+			sb.append("<select name='first' id='firstCatagory'> <a href='#secondCatagory' onchange='firstChange("+ca.getPc1_id()+")'>");
 			sb.append("<option value='1차 분야를 선택하세요'>1차 분야를 선택하세요</option>");
 			for(int i=0; i<cList1.size(); i++){
 				Catagory ca = cList1.get(i);
-				sb.append("<option> <a href='#secondCatagory' onchange='firstChange("+ca.getPc1_id()+")'>"+ca.getPc1_name());
+				sb.append("<option>" +ca.getPc1_name());
 				sb.append("</a></option>,");
 			}
 				sb.append("</select>");

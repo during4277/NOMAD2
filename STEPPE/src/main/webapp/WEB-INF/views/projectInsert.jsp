@@ -47,7 +47,9 @@
 					<div id="centered">
 					<h2>프로젝트 등록</h2>
 					<form name="pInsert" action="insertProject" method="get" onsubmit="return check()">
-							${cList1}
+						<select name="foodkind" id="foodkind" onchange="fkind(); >
+						
+						</select>
 						<div id="secondCatagory"></div>
 							
 					</form>				
@@ -61,6 +63,9 @@
 	</div>
 	<script>
 	function firstChange(pc1_id){
+		 var selectBox = document.getElementById("firstCatagory");
+		 var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+		 alert(selectedValue + '을  선택하셨습니다.');
 	    	 $.ajax({
 	    		 type:'get',
 	    		 url : "/secondCatagory",
